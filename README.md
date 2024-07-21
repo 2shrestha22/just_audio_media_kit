@@ -88,17 +88,6 @@ Enables or disables pitch shift control for native backend (with this set to fal
 JustAudioMediaKit.pitch = true;
 ```
 
-Enables gapless playback via the [`--prefetch-playlist`](https://mpv.io/manual/stable/#options-prefetch-playlist) in libmpv. Default: `false`
-
-This is highly experimental. Use at your own risk.
-
-Check [mpv's docs](https://mpv.io/manual/stable/#options-prefetch-playlist) and
-[the related issue](https://github.com/Pato05/just_audio_media_kit/issues/11) for more information
-
-```dart
-JustAudioMediaKit.prefetchPlaylist = true;
-```
-
 ## Manually specify `libmpv` path (ADVANCED)
 
 To manually specify the `libmpv` path, you can use the `libmpv` parameter in the `ensureInitialized` method:
@@ -130,7 +119,7 @@ This is **NOT NEEDED** in most cases, as `package:media_kit` will choose the rig
 | playlists                      |       ✅       |
 | looping/shuffling              |       ✅       |
 | compose audio                  |                |
-| gapless playback               |       ✅\*\*   |
+| gapless playback               |       ✅       |
 | report player errors           |       ✅       |
 | handle phonecall interruptions |                |
 | buffering/loading options      |                |
@@ -140,7 +129,6 @@ This is **NOT NEEDED** in most cases, as `package:media_kit` will choose the rig
 | volume boost                   |                |
 
 \* reads from byte stream via a local HTTP server provided by `just_audio`
-<br>\*\* needs to be enabled
 
 ## Caveats
 
